@@ -12,7 +12,8 @@ module.exports = {
     // Author name, shown in left sidebar, and used in JSON-LD
     author: "Matt Blackman",
     // Site description, shown below site image (optional)
-    description: "Nestled amidst the mountains near Denver, I breathe life into virtual worlds, sculpting them with code and data.",
+    description:
+        "Nestled amidst the mountains near Denver, I breathe life into virtual worlds, sculpting them with code and data.",
     // OpenGraph default image, in case you don't have an `image`
     // set in your Markdown frontmatter; relevant for social
     // sharing.
