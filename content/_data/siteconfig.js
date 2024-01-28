@@ -12,7 +12,7 @@ module.exports = {
     // Author name, shown in left sidebar, and used in JSON-LD
     author: "Matt Blackman",
     // Site description, shown below site image (optional)
-    description: "My personal space on the web",
+    description: "Nestled amidst the mountains near Denver, I breathe life into virtual worlds, sculpting them with code and data.",
     // OpenGraph default image, in case you don't have an `image`
     // set in your Markdown frontmatter; relevant for social
     // sharing.
@@ -29,7 +29,7 @@ module.exports = {
     // See: https://github.com/algolia/algoliasearch-netlify
     algoliaSearch: {
         // When enabled shows the search bar in the UI
-        enabled: true,
+        enabled: false,
         // You'll have to set this manually in your build settings.
         // The value comes from Algolia, and is either visible in the
         // UI for the Crawler Plugin or the Algolia Dashboard.
