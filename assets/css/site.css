@@ -509,3 +509,84 @@ div.code-toolbar > .toolbar span {
         display: none;
     }
 }
+
+/* Projects */
+
+.vert-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-item-container {
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.project-item {
+    height: 350px;
+    border: 1.8px solid;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+    border-color: #545454;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.project-item-title-container {
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  line-height: 35px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  pointer-events: none;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.project-item-tags-container {
+  margin-top: 10px;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.project-item-tag {
+  height: 28px;
+  min-width: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+  float: left;
+  background-color: #6f1b85;
+  margin-right: 5px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 4px;
+}

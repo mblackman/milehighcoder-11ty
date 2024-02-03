@@ -1,0 +1,37 @@
+---
+eleventyExcludeFromCollections: true
+layout: base.njk
+title: Projects
+meta:
+  robots:
+    value: noindex
+---
+
+<div class="postlist pb-8 mt-8 font-light dark:font-extralight">
+    {% for project in collections.projects %}
+    <div class="project-item-container">
+        <a href="{{ project.url | url }}">
+            <div class="project-item">
+                <img class="preview-splash" src="{{ project.data.splash }}"></img>
+                <div class="project-item-title-container">
+                    <div class="text-indigo-900 dark:text-indigo-300 text-xl dark:font-light font-normal postlistheading">
+                        {{ project.data.title }}
+                    </div>
+                </div>
+            </div>
+        </a>
+      	<div class="pb-6 text-sm text-gray-500 dark:text-gray-400 flex">
+			<div class="vert-box">
+                <div class="project-item-tags-container">
+                    {% for tag in project.data.tech %}
+                        <div class="project-item-tag">
+                            <span>{{tag}}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="pb-4 text-gray-900 dark:text-gray-400 pt-4">{{ project.data.description }}</div>
+			</div>
+      	</div>
+    </div>
+    {% endfor %}
+</div>
