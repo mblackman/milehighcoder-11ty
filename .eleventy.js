@@ -109,7 +109,7 @@ module.exports = function (eleventyConfig) {
 
     // Extracts readable date of a date
     eleventyConfig.addNunjucksFilter("readableDate", function (date) {
-        return format(date, "MMM dd, yyyy");
+        return date instanceof Date ? format(date, "MMM dd, yyyy") : date;
     });
 
     // Add custom hash for cache busting
@@ -140,6 +140,10 @@ module.exports = function (eleventyConfig) {
 
     // Plugin for minifying HTML
     eleventyConfig.addPlugin(require("./_11ty/html-minify.js"));
+
+    eleventyConfig.addFilter("matches", function (arr = [], key = "", value) {
+        return arr?.filter((item) => item.data[key] === value);
+    });
 
     return {
         dir: {

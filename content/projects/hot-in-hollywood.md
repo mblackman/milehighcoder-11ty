@@ -6,6 +6,7 @@ splash: /assets/images/projects/hot-in-hollywood-splash.png
 date: 2023-04-01
 endDate: 2024-01-06
 tags: professional-project
+visible: false
 tech:
     - Unity
     - C#

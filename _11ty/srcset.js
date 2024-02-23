@@ -33,7 +33,8 @@ const widths = [1024, 820, 640, 320];
 
 const extension = {
     jpeg: "jpg",
-    webp: "webp"
+    webp: "webp",
+    gif: "gif"
 };
 
 // Map filenames to types and width, and then resize
@@ -99,6 +100,12 @@ const processImage = async (el) => {
     }
 
     const file = join(process.cwd(), filename);
+
+    if (extname(filename.toLowerCase()) === ".gif") {
+        // Specific GIF handling
+        await sharp(file).toFile("_site/" + filename); // Overwrite with optimized version
+        return;
+    }
 
     // Generate file hash
     const hash = MD5(readFileSync(file).toString());

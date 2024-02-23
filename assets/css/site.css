@@ -538,6 +538,8 @@ div.code-toolbar > .toolbar span {
     margin-bottom: 50px;
     text-align: center;
     overflow: hidden;
+    display: grid;
+    justify-content: start;
 }
 
 .project-item {
