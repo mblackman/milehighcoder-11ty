@@ -3,7 +3,7 @@ eleventyExcludeFromCollections: true
 layout: base.njk
 title: Blog
 pagination:
-  data: collections.posts
+  data: collections.blog
   size: 10
   alias: posts
   reverse: true
@@ -11,7 +11,6 @@ meta:
   robots:
     value: noindex
 ---
-
 <div class="postlist pb-8 mt-8 font-light dark:font-extralight">
     {% for post in posts %}
     <div>
