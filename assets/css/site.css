@@ -534,12 +534,8 @@ div.code-toolbar > .toolbar span {
     max-width: 340px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
     text-align: center;
     overflow: hidden;
-    display: grid;
-    justify-content: start;
 }
 
 .project-item {
@@ -554,6 +550,12 @@ div.code-toolbar > .toolbar span {
     position: relative;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
+}
+
+.projects-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px 20px;
 }
 
 .project-item-title-container {

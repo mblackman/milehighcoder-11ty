@@ -7,7 +7,7 @@ meta:
     value: noindex
 ---
 
-<div class="postlist pb-8 mt-8 font-light dark:font-extralight">
+<div class="postlist projects-container pb-8 mt-8 font-light dark:font-extralight">
     {% for project in collections.projects | matches('visible', true) %}
     <div class="project-item-container">
         <a href="{{ project.url | url }}">
