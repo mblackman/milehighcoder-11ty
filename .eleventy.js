@@ -129,8 +129,10 @@ module.exports = function (eleventyConfig) {
 
     // Create custom collection for getting the newest 5 updates
     eleventyConfig.addCollection("recents", function (collectionApi) {
-        return collectionApi.getAllSorted().reverse().slice(0, 5);
-    });
+        return collectionApi.getAll()
+            .filter(item => item.data.tags && item.data.tags.includes('blog')) // Modify this filter condition
+            .reverse().slice(0, 5);
+      });
 
     // Plugin for setting _blank and rel=noopener on external links in markdown content
     eleventyConfig.addPlugin(require("./_11ty/external-links.js"));
