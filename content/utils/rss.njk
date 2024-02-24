@@ -9,12 +9,12 @@ permalink: /blog.rss
   <subtitle>{{ siteconfig.description }}</subtitle>
   <link href="{{ '/blog.rss' | absoluteUrl }}" rel="self"/>
   <link href="{{ siteconfig.url }}"/>
-  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
   <id>{{ siteconfig.url }}</id>
   <author>
     <name>{{ siteconfig.author }}</name>
   </author>
-  {%- for post in collections.posts | reverse %}
+  {%- for post in collections.blog | reverse %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
