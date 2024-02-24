@@ -2,7 +2,7 @@
 title: Elysian Guardians
 subdir: Project
 description: A farming sim where players capture creature who fight and aid around the farm
-splash: /assets/images/projects/elysian-guardians-splash.gif
+splash: /assets/images/projects/elysian-guardians-splash.webp
 date: 2023-09-02
 endDate: Present
 tags: personal-project

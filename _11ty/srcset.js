@@ -88,6 +88,16 @@ async function setSrcset(img, src, hash, format, metadataWidth) {
     img.setAttribute("srcset", await srcset(src, hash, format, metadataWidth));
 }
 
+async function isAnimatedWebp(webpFile) {
+    try {
+      const metadata = await sharp(webpFile).metadata();
+      return metadata.pages > 1 ; // Check if it has multiple pages (frames)  
+    } catch (error) {
+      console.error("Error checking WebP animation:", error);
+      return false; // Default to non-animated if error occurs
+    }
+  }
+
 const processImage = async (el) => {
     const filename = el.getAttribute("src");
 
@@ -95,9 +105,16 @@ const processImage = async (el) => {
         return;
     }
 
-    if (extname(filename.toLowerCase()) === ".svg") {
+    if (extname(filename.toLowerCase()) === ".svg" || extname(filename.toLowerCase()) === ".mp4") {
         return;
     }
+
+    if (extname(filename.toLowerCase()) === ".webp") {
+        const isAnimated = await isAnimatedWebp(join(process.cwd(), filename));
+        if (isAnimated) {
+           return; // Skip processing if animated WebP
+        }
+      }
 
     const file = join(process.cwd(), filename);
 
