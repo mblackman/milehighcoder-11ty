@@ -1,7 +1,5 @@
 # milehighcoder.com - My Game Development Portfolio and Blog
 
-[![Blog build (main)](https://github.com/mblackman/milehighcoder-dot-com/actions/workflows/build-main.yml/badge.svg)](https://github.com/mblackman/milehighcoder-dot-com/actions/workflows/build-main.yml)
-
 This is a repository for my webpage built on a static-site generator [Eleventy](https://www.11ty.dev/) to create a landing page for all my projects and thoughts. This project has been strung together with the help of all sorts of awesome 11ty developers worldwide!
 
 ## Deployment
