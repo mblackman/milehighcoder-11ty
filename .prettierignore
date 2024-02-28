@@ -3,7 +3,6 @@
 #
 
 _site/
-.netlify/
 .vscode/
 assets/css/*-build.css
 assets/js/*.js
