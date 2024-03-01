@@ -42,6 +42,14 @@ yarn dev
 
 Open the page, usually on <http://localhost:8080>, and dig around!
 
+### Media Encoding
+
+Animated images can be taken from mp4 format and converted into webp using this command.
+
+```zsh
+ffmpeg -i input.mp4 -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 500:500 output.webp
+```
+
 ## Get Started
 
 1. Experience the Live Site: Visit [www.milehighcoder.com](https://milehighcoder.com/) for the full experience.
