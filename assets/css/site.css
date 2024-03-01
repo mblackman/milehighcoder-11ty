@@ -573,7 +573,10 @@ div.code-toolbar > .toolbar span {
 }
 
 .project-item-tags-container {
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
     width: 100%;
     text-align: left;
     overflow: hidden;
@@ -584,13 +587,13 @@ div.code-toolbar > .toolbar span {
     min-width: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
-    font-weight: 200;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 16px;
     float: left;
-    background-color: #6f1b85;
-    margin-right: 5px;
-    margin-top: 10px;
+    margin-right: 12px;
+    margin-top: 12px;
     text-align: center;
     border-radius: 4px;
+    outline-style: solid;
+    outline-width: 3px;
 }

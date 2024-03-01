@@ -112,6 +112,29 @@ module.exports = function (eleventyConfig) {
         return date instanceof Date ? format(date, "MMM dd, yyyy") : date;
     });
 
+    eleventyConfig.addNunjucksFilter("techPill", function (name) {
+        switch (name) {
+            case "C#":
+                return "#A279DD";
+            case "Godot":
+                return "#478CBF";
+            case "Javascript":
+                return "#F9DC5C";
+            case "Unity":
+                return "#E84855";
+            case "Eleventy":
+                return "#4C9F70";
+            case "Nunjacks":
+                return "#D7263D";
+            case "HTML/CSS":
+                return "#0CF574";
+            case "Prototype":
+                return "#15E6CD";
+            default:
+                return "#6f1b85";
+        }
+    });
+
     // Add custom hash for cache busting
     const hashes = new Map();
     eleventyConfig.addNunjucksFilter("addHash", function (absolutePath) {

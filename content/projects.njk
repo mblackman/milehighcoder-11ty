@@ -24,7 +24,7 @@ meta:
 			<div class="vert-box">
                 <div class="project-item-tags-container">
                     {% for tag in project.data.tech %}
-                        <div class="project-item-tag">
+                        <div class="project-item-tag text-gray-900 dark:text-gray-100" style="outline-color: {{tag | techPill }};">
                             <span>{{tag}}</span>
                         </div>
                     {% endfor %}
