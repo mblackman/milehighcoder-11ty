@@ -49,7 +49,6 @@ Open the page, usually on <http://localhost:8080>, and dig around!
 1. Experience the Live Site: Visit [www.milehighcoder.com](https://milehighcoder.com/) for the full experience.
 2. Contribute: Feel free to suggest improvements or open issues on this GitHub repository.
 
-
 ## Credits
 
 Based on the awesome template [eleventy-chirpy-blog-template](https://github.com/muenzpraeger/eleventy-chirpy-blog-template) by [muenzpraeger](https://github.com/muenzpraeger).

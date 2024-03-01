@@ -17,8 +17,8 @@ A 2D farming simulator with a variety of creatures that can be befriended to ass
 
 ## Features
 
--   Gardening and resource management: Players plant magical seeds to grow plants that produce resources for sprite training and crafting.
--   Monster taming and training: Players attract and tame elemental sprites to aid in gardening and defense.
--   NPC interaction: Players interact with animal neighbors for quests that unlock new plants, sprite abilities, and crafting materials.
--   Real-time defense events: Players use tamed sprites to defend their garden from intruders.
--   Crafting and building: Players craft defensive structures and buildings to enhance their defenses.
+-   **Gardening and resource management**: Players plant magical seeds to grow plants that produce resources for sprite training and crafting.
+-   **Monster taming and training**: Players attract and tame elemental sprites to aid in gardening and defense.
+-   **NPC interaction**: Players interact with animal neighbors for quests that unlock new plants, sprite abilities, and crafting materials.
+-   **Real-time defense events**: Players use tamed sprites to defend their garden from intruders.
+-   **Crafting and building**: Players craft defensive structures and buildings to enhance their defenses.
