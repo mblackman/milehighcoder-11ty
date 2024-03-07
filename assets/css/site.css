@@ -510,19 +510,6 @@ div.code-toolbar > .toolbar span {
     }
 }
 
-.row-end-5 {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto; /* or overflow: auto; */
-}
-
-@media (max-width: 480px) {
-    .row-end-5 a {
-        width: 30px; 
-        height: 30px; 
-    }
-}
-
 /* Projects */
 
 .vert-box {
