@@ -518,11 +518,10 @@ div.code-toolbar > .toolbar span {
 }
 
 .preview-splash {
+    max-width: 300px;
+    max-height: 500px;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    object-fit: cover;
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -530,32 +529,25 @@ div.code-toolbar > .toolbar span {
     transition: all 0.3s ease-in-out;
 }
 
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .project-item-container {
-    max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
     overflow: hidden;
+    width: 300px;
 }
 
 .project-item {
-    height: 350px;
-    border: 1.8px solid;
-    border-top-color: currentcolor;
-    border-right-color: currentcolor;
-    border-bottom-color: currentcolor;
-    border-left-color: currentcolor;
-    border-color: #545454;
+    height: 300px;
+    border: 1.8px solid #545454;
     border-radius: 5px;
     position: relative;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
-}
-
-.projects-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px 20px;
 }
 
 .project-item-title-container {
@@ -574,9 +566,7 @@ div.code-toolbar > .toolbar span {
 
 .project-item-tags-container {
     margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 3px;
+    padding: 5px;
     width: 100%;
     text-align: left;
     overflow: hidden;
@@ -584,16 +574,25 @@ div.code-toolbar > .toolbar span {
 
 .project-item-tag {
     height: 28px;
-    min-width: 30px;
     padding-left: 10px;
     padding-right: 10px;
     font-weight: 300;
     font-size: 16px;
-    float: left;
     margin-right: 12px;
     margin-top: 12px;
-    text-align: center;
     border-radius: 4px;
     outline-style: solid;
     outline-width: 3px;
+}
+
+@media (max-width: 768px) {
+    .project-item-tag {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
 }

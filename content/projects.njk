@@ -12,7 +12,7 @@ meta:
     <div class="project-item-container">
         <a href="{{ project.url | url }}">
             <div class="project-item">
-                <img class="preview-splash" src="{{ project.data.splash }}"></img>
+                <img class="preview-splash" src="{{ project.data.splash }}">
                 <div class="project-item-title-container">
                     <div class="text-indigo-900 dark:text-indigo-300 text-xl dark:font-light font-normal postlistheading">
                         {{ project.data.title }}
@@ -20,18 +20,16 @@ meta:
                 </div>
             </div>
         </a>
-      	<div class="pb-6 text-sm text-gray-500 dark:text-gray-400 flex">
-			<div class="vert-box">
-                <div class="project-item-tags-container">
-                    {% for tag in project.data.tech %}
-                        <div class="project-item-tag text-gray-900 dark:text-gray-100" style="outline-color: {{tag | techPill }};">
-                            <span>{{tag}}</span>
-                        </div>
-                    {% endfor %}
+        <div class="pb-6 text-sm text-gray-500 dark:text-gray-400 flex flex-col items-start">
+            <div class="project-item-tags-container flex flex-wrap">
+                {% for tag in project.data.tech %}
+                <div class="project-item-tag text-gray-900 dark:text-gray-100" style="outline-color: {{tag | techPill }};">
+                    <p style="text-align: center">{{tag}}</p>
                 </div>
-                <div class="pb-4 text-gray-900 dark:text-gray-400 pt-4">{{ project.data.description }}</div>
-			</div>
-      	</div>
+                {% endfor %}
+            </div>
+            <div class="pt-4">{{ project.data.description }}</div>
+        </div>
     </div>
     {% endfor %}
 </div>
