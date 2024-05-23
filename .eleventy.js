@@ -7,6 +7,7 @@ const { readFileSync } = require("fs");
 const siteconfig = require("./content/_data/siteconfig.js");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
     // Set Markdown library
@@ -135,6 +136,23 @@ module.exports = function (eleventyConfig) {
         }
     });
 
+    eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
+		let metadata = await Image(src, {
+			widths: [300, 600],
+			formats: ["avif", "jpeg"],
+		});
+
+		let imageAttributes = {
+			alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+		};
+
+		// You bet we throw an error on a missing alt (alt="" works okay)
+		return Image.generateHTML(metadata, imageAttributes);
+	});
+
     // Add custom hash for cache busting
     const hashes = new Map();
     eleventyConfig.addNunjucksFilter("addHash", function (absolutePath) {
@@ -161,9 +179,6 @@ module.exports = function (eleventyConfig) {
 
     // Plugin for setting _blank and rel=noopener on external links in markdown content
     eleventyConfig.addPlugin(require("./_11ty/external-links.js"));
-
-    // Plugin for transforming images
-    eleventyConfig.addPlugin(require("./_11ty/srcset.js"));
 
     // Plugin for minifying HTML
     eleventyConfig.addPlugin(require("./_11ty/html-minify.js"));
