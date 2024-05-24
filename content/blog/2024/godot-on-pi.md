@@ -1,9 +1,9 @@
 ---
 title: Godot 4 on Raspberry Pi - Easy Steps to Play Your Games on a Tiny Computer
 date: 2024-04-08
+banner: /assets/images/blog/2024/godot-on-pi/raspberry-pi-export-header.png
+bannerAlt: Preview of Candy Wrapper playing on a Raspberry Pi with a raspberry frame.
 ---
-
-![Banner Image](/assets/images/blog/2024/godot-on-pi/raspberry-pi-export-header.png "Banner Image")
 
 Turn your Raspberry Pi into a tiny arcade machine to show off your 2D game creations! This guide will walk you through exporting your Godot 4 projects to the Raspberry Pi, a small and affordable computer perfect for game development and play. We'll focus on exporting a simple 2D game,
 

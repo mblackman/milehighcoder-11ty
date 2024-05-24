@@ -3,6 +3,11 @@ layout: base.njk
 ---
 
 <div class="content post border-solid border-b-1 border-gray-700 pb-6">
+	{% if banner %}
+	<div class="w-full overflow-hidden">
+		<img src="{{ banner }}" title="{{ bannerAlt }}" alt="{{ bannerAlt }}" class="w-full h-100 object-cover"/>
+	</div>
+	{% endif %}
   	<h1>{{ title }}</h1>
   	<div class="mb-12 flex text-sm font-light dark:font-extralight">
 		<div class="flex">
@@ -47,9 +52,6 @@ layout: base.njk
 			<span></span>
 		</div>
 	</div>
-	{% if image %}
-	<img src="{{ image }}" alt="{{ imageAlt }}" />
-	{% endif %}
   	{{ content | safe }}
   	{% include "social.njk" %}
 	<div class="block w-full h-1 border-solid border-b-1 border-gray-700"></div>
