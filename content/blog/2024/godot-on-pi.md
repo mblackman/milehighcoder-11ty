@@ -9,8 +9,8 @@ Turn your Raspberry Pi into a tiny arcade machine to show off your 2D game creat
 
 ## What are Godot and Raspberry Pi?
 
-- **Godot 4**: A free and open-source game engine known for its user-friendly interface and cross-platform capabilities. It's a great choice for both beginners and experienced developers.
-- **Raspberry Pi**: A series of credit card-sized computers that are surprisingly powerful and versatile. They're often used for DIY projects, learning to code, and even building retro gaming consoles.
+-   **Godot 4**: A free and open-source game engine known for its user-friendly interface and cross-platform capabilities. It's a great choice for both beginners and experienced developers.
+-   **Raspberry Pi**: A series of credit card-sized computers that are surprisingly powerful and versatile. They're often used for DIY projects, learning to code, and even building retro gaming consoles.
 
 ## Why Raspberry Pi for Game Development?
 
@@ -18,10 +18,10 @@ The Raspberry Pi is a fantastic platform for game development due to its afforda
 
 ## Prerequisites
 
-- Raspberry Pi 4B. I tested on the Raspberry Pi 4B with 4GB, which was more than enough to run a small, 2D game.
-- MicroSD Card
-- Godot 4
-- [Recommended] Separate development machine: While not strictly necessary, having a separate computer for development can make the process easier.
+-   Raspberry Pi 4B. I tested on the Raspberry Pi 4B with 4GB, which was more than enough to run a small, 2D game.
+-   MicroSD Card
+-   Godot 4
+-   [Recommended] Separate development machine: While not strictly necessary, having a separate computer for development can make the process easier.
 
 ## Setting up your Raspberry Pi
 
@@ -33,7 +33,7 @@ Once it's finished, plug your MicroSD card into the Raspberry Pi. You'll want to
 
 Once you're logged in, connect to the internet and update your Raspberry Pi by running the following command:
 
-``` zsh
+```zsh
 sudo apt update -y && sudo apt upgrade -y
 ```
 
@@ -81,11 +81,11 @@ Open the export settings from the menu bar by going to `Project -> Export`, wher
 
 We're going to adding a new export config by tapping on `Add` and selected `Linux/X11`. We're going to keep the config simple and change the following settings:
 
-- Name: Raspberry Pi
-- Export Path: /your/dir/candy-wrapper.arm32
-- Debug -> Debug Export Wrapper: No
-- Binary Format -> Architecture: arm32
-- [If you're using the .NET version] Dotnet -> Include Debug Symbols: Off
+-   Name: Raspberry Pi
+-   Export Path: /your/dir/candy-wrapper.arm32
+-   Debug -> Debug Export Wrapper: No
+-   Binary Format -> Architecture: arm32
+-   [If you're using the .NET version] Dotnet -> Include Debug Symbols: Off
 
 No other settings need to be changed for this tutorial.
 
@@ -101,7 +101,7 @@ Now, let's get that game transferred to your Raspberry Pi. There are many ways t
 
 First, you'll want to get the IP address of your Raspberry Pi in order to connect with it. You'll need to physically access your Pi, login, and run the following command:
 
-``` zsh
+```zsh
 hostname -I
 ```
 
@@ -131,7 +131,7 @@ We're in the final stretch now! All that's left is running our game on the Raspb
 
 To run the game, open a terminal and run the following commands:
 
-``` zsh
+```zsh
 cd ~/CandyWrapper
 ./candy-wrapper.arm32
 ```

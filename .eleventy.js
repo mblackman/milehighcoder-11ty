@@ -137,21 +137,21 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
-		let metadata = await Image(src, {
-			widths: [300, 600],
-			formats: ["avif", "jpeg"],
-		});
+        let metadata = await Image(src, {
+            widths: [300, 600],
+            formats: ["avif", "jpeg"]
+        });
 
-		let imageAttributes = {
-			alt,
-			sizes,
-			loading: "lazy",
-			decoding: "async",
-		};
+        let imageAttributes = {
+            alt,
+            sizes,
+            loading: "lazy",
+            decoding: "async"
+        };
 
-		// You bet we throw an error on a missing alt (alt="" works okay)
-		return Image.generateHTML(metadata, imageAttributes);
-	});
+        // You bet we throw an error on a missing alt (alt="" works okay)
+        return Image.generateHTML(metadata, imageAttributes);
+    });
 
     // Add custom hash for cache busting
     const hashes = new Map();
