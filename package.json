@@ -17,7 +17,7 @@
         "lint": "npm run lint:markdown && npm run lint:js",
         "lint:markdown": "npx markdownlint-cli2 \"./content/**/*.md\"",
         "lint:js": "eslint '**/*.js'",
-        "postinstall": "husky install",
+        "postinstall": "if [ -z \"$CI\" ]; then husky install; fi",
         "precommit": "npm run prettier && npm run lint",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,yaml,yml}\""
