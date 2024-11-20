@@ -21,7 +21,9 @@ module.exports = {
     // GitHub ID (optional, remove it not needed), used for link in the left sidebar
     socialGitHub: "mblackman",
     // LinkedIn ID  (optional, remove it not needed), used for link in the left sidebar
-    socialLinkedIn: "blackmanm",
+    // socialLinkedIn: "",
+    // Bluesky link (optional, remove it not needed), used for link in the left sidebar
+    socialBluesky: "https://bsky.app/profile/milehighcoder.com",
     // Mastodon link (optional, remove it not needed), used for link in the left sidebar, and for OpenGraph sharing information
     socialMastodon: "https://mastodon.gamedev.place/@milehighcoder",
     // Google Analytics ID  (optional, remove it not needed), used for... well, Google Analytics
