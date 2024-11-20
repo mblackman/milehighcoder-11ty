@@ -10,6 +10,9 @@ const markdownItAnchor = require("markdown-it-anchor");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
+    // Add global configs
+    eleventyConfig.addGlobalData("rootURL", "https://www.milehighcoder.com");
+    
     // Set Markdown library
     eleventyConfig.setLibrary(
         "md",
