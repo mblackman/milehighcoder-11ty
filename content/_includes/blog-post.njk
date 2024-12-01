@@ -2,6 +2,46 @@
 layout: base.njk
 ---
 
+<script>
+function updateUtterancesTheme() {
+    const utterances = document.querySelector('.utterances-frame');
+	console.log("Update utterances theme.");
+    if (utterances) {
+        const theme = localStorage.theme === 'light'
+			? '{{siteconfig.utterances.lightTheme}}'
+			: '{{siteconfig.utterances.darkTheme}}';
+		console.log("Changing theme to " + theme)
+        utterances.contentWindow.postMessage({
+			type: 'set-theme',
+			theme: theme
+        }, 'https://utteranc.es');
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+	const utterancesScript = document.createElement('script');
+	utterancesScript.src = 'https://utteranc.es/client.js';
+	utterancesScript.setAttribute('repo', '{{siteconfig.utterances.repo}}');
+	utterancesScript.setAttribute('issue-term', '{{siteconfig.utterances.issueTerm}}');
+	{% if siteconfig.utterances.label %}
+        utterancesScript.setAttribute('label', '{{siteconfig.utterances.label}}');
+	{% endif %}
+	utterancesScript.async = true;
+    utterancesScript.crossOrigin = 'anonymous';
+	const theme = localStorage.theme === 'light'
+		? '{{siteconfig.utterances.lightTheme}}'
+		: '{{siteconfig.utterances.darkTheme}}';
+  	utterancesScript.setAttribute('theme', theme); 
+
+	const utterancesContainer = document.getElementById('utterances-block');
+  	utterancesContainer.appendChild(utterancesScript);
+
+	document.addEventListener('themeChanged', function(event) {
+		updateUtterancesTheme();
+	});
+});
+</script>
+
 <div class="content post border-solid border-b-1 border-gray-700 pb-6">
 	{% if banner %}
 	<div class="w-full overflow-hidden">
@@ -85,5 +125,7 @@ layout: base.njk
 		</a>	
 	  	{% endfor %}
 	</div>
-	{% endif %}
+	{% endif %}	
 </div>
+
+<div id="utterances-block"></div>

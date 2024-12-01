@@ -27,7 +27,7 @@ module.exports = {
     // Mastodon link (optional, remove it not needed), used for link in the left sidebar, and for OpenGraph sharing information
     socialMastodon: "https://mastodon.gamedev.place/@milehighcoder",
     // Google Analytics ID  (optional, remove it not needed), used for... well, Google Analytics
-    googleAnalytics: "YOUR_GA-ID",
+    //googleAnalytics: "YOUR_GA-ID",
     // Algolia-powered search  (optional, remove it not needed),
     // See: https://github.com/algolia/algoliasearch-netlify
     algoliaSearch: {
@@ -48,5 +48,13 @@ module.exports = {
         // Assuming that you deploy your "main" branch. Otherwise you
         // can either override or configure this (using process.env.HEAD)
         branch: "main"
+    },
+    // Configuration for the Utterances comments.
+    utterances: {
+        repo: "mblackman/milehighcoder-dot-com",
+        issueTerm: "pathname",
+        label: "discussion",
+        lightTheme: "boxy-light",
+        darkTheme: "photon-dark"
     }
 };

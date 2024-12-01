@@ -44,6 +44,9 @@ function toggleDarkLightMode (isInit) {
             }
         }
     }
+    
+    const themeChange = new CustomEvent('themeChanged', { detail: { theme: localStorage.theme } });
+    document.dispatchEvent(themeChange); 
 };
 toggleDarkLightMode(true);
 </script>
