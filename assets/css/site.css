@@ -391,8 +391,8 @@ html[class="dark"] ul.pagination div.active {
     justify-content: center;
     align-content: center;
     align-items: center;
-    bottom: 80px;
-    right: 60px;
+    bottom: 10px;
+    right: 10px;
     opacity: 0.8;
     border-radius: 50%;
     z-index: 9;
@@ -403,8 +403,8 @@ html[class="dark"] ul.pagination div.active {
 
 @media all and (max-width: 400px) {
     .scroll {
-        bottom: 40px;
-        right: 40px;
+        bottom: 10px;
+        right: 10px;
         animation: fadeup-scrolltop-mobile 0.7s;
     }
 }
@@ -429,22 +429,22 @@ html[class="dark"] ul.pagination div.active {
 @keyframes fadeup-scrolltop {
     0% {
         opacity: 0;
-        bottom: 20px;
+        bottom: 0px;
     }
     100% {
         opacity: 0.8;
-        bottom: 80px;
+        bottom: 10px;
     }
 }
 
 @keyframes fadeup-scrolltop-mobile {
     0% {
         opacity: 0;
-        bottom: 20px;
+        bottom: 0px;
     }
     100% {
         opacity: 0.8;
-        bottom: 40px;
+        bottom: 10px;
     }
 }
 
