@@ -1,6 +1,7 @@
 ---
 title: milehighcoder.com
 subdir: Project
+repo: https://github.com/mblackman/milehighcoder-dot-com
 description: A statically generated website for my personal page on the web. You are looking at it right now!
 splash: /assets/images/projects/mile-high-coder-splash.jpg
 date: 2024-01-25

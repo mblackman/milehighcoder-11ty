@@ -4,13 +4,19 @@ layout: base.njk
 
 <div class="content post border-solid border-b-1 border-gray-700 pb-6">
   	<h1>{{ title }}</h1>
-  	<div class="mb-12 flex text-sm font-light dark:font-extralight">
+	<div class="flex text-sm font-light dark:font-extralight">
 		<div class="flex">
         	{{ date | readableDate }} - {{ endDate | readableDate }}
 		</div>
 	</div>
-	{% if image %}
-	<img src="{{ image }}" alt="{{ imageAlt }}" />
+	{% if repo %}
+	<div class="mt-2">
+		<a href="{{ repo }}">
+			{{ repo }}
+		</a>
+	</div>
 	{% endif %}
+  	<div class="mt-6">
   	{{ content | safe }}
+	</div>
 </div>
