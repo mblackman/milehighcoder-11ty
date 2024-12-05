@@ -25,6 +25,7 @@
         "@11ty/eleventy": "^3.0.0",
         "@11ty/eleventy-img": "^5.0.0",
         "@11ty/eleventy-plugin-rss": "^2.0.2",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
         "@rollup/plugin-replace": "^2.4.2",
         "autoprefixer": "^10.2.6",
         "crypto-js": "^4.0.0",

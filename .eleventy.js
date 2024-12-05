@@ -8,6 +8,7 @@ const siteconfig = require("./content/_data/siteconfig.js");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const Image = require("@11ty/eleventy-img");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
     // Add global configs
@@ -35,6 +36,7 @@ module.exports = function (eleventyConfig) {
     // Add 3rd party plugins
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginToc);
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     // Define 11ty template formats
     eleventyConfig.setTemplateFormats([
