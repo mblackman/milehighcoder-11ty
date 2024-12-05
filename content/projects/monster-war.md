@@ -16,5 +16,5 @@ Monster War is a turn-based RPG inspired by the Pokémon series, but with a dark
 
 ## Features
 
--   **Pathfinding**: A custom grid-based pathfinding system using an A\* pathfinding algorithm for complex ai movement and simple player control.
--   **Dynamic Battle System**: Battles will be highly customizable thanks to a modular turn-based combat system that supports a wide range of attack types and strategies.
+- **Pathfinding**: A custom grid-based pathfinding system using an A\* pathfinding algorithm for complex ai movement and simple player control.
+- **Dynamic Battle System**: Battles will be highly customizable thanks to a modular turn-based combat system that supports a wide range of attack types and strategies.

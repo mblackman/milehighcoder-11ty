@@ -19,5 +19,5 @@ A static HTML website built using the NodeJS package Eleventy. This is my person
 
 ## Features
 
--   **Automated CI/CD**: Changes on GitHub are automatically tracked and a cloud build is triggers that lints the projects, builds the static site, and uploads it to the static site host.
--   **Image Optimization**: Images are automatically processed during the build process so still images are optimized for the web.
+- **Automated CI/CD**: Changes on GitHub are automatically tracked and a cloud build is triggers that lints the projects, builds the static site, and uploads it to the static site host.
+- **Image Optimization**: Images are automatically processed during the build process so still images are optimized for the web.

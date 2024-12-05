@@ -12,4 +12,4 @@ I've got experience with Unity, C#, and Godot, and I'm currently building my own
 
 When I'm not coding, you'll find me reading, tackling challenging platformers (looking at you, Celeste!), struggling in Dota 2, and exploring the amazing Colorado scenery.
 
-Want to join me on this crazy adventure? Hit me up at contact@milehighcoder.com – let's make some awesome games together!
+Want to join me on this crazy adventure? Hit me up at <contact@milehighcoder.com> – let's make some awesome games together!
